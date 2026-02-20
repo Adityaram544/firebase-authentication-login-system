@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #141e30, #243b55, #2c3e50, #4ca1af);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Container */
+.container{
+    background:#ffffff;
+    width:100%;
+    max-width:420px;
+    padding:2rem;
+    border-radius:20px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.15);
+    animation:fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+form{
+    margin:0 1rem;
+}
+
+.form-title{
+    font-size:1.8rem;
+    font-weight:600;
+    text-align:center;
+    margin-bottom:1.5rem;
+    color:#333;
+}
+
+/* Input Styling */
+.input-group{
+    margin-bottom:1.5rem;
+    position:relative;
+}
+
+.input-group i{
+    position:absolute;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    color:#888;
+}
+
+input{
+    width:100%;
+    padding:12px 12px 12px 40px;
+    border-radius:8px;
+    border:1px solid #ddd;
+    font-size:14px;
+    transition:0.3s ease;
+    background:#f9f9f9;
+}
+
+input:focus{
+    outline:none;
+    border-color:#2c3e50;
+    background:#fff;
+    box-shadow:0 0 8px rgba(102,126,234,0.3);
+}
+
+/* Buttons */
+button{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color:white;
+    transition:0.3s ease;
+}
+
+button:hover{
+    text-decoration: none;
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Links */
+.links{
+    margin-top:1.2rem;
+    text-align:center;
+}
+
+.links button{
+    background:none;
+    color:#2c3e50;
+    font-weight:600;
+}
+
+.links button:hover{
+    text-decoration:none;
+}
+
+/* Message Box */
+.messageDiv{
+    background:#ff4d6d;
+    color:white;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .container{
+        margin:20px;
+        padding:1.5rem;
+        border-radius:15px;
+    }
+
+    .form-title{
+        font-size:1.5rem;
+    }
+}
